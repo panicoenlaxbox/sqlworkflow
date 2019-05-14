@@ -1,0 +1,26 @@
+{
+  "name": "sqlworkflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsqllint": "tsqllint",
+    "sqlformat": "sqlformat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.4",
+    "husky": "^2.2.0",
+    "poor-mans-t-sql-formatter-cli": "^1.6.10",
+    "tsqllint": "^1.11.0"
+  },
+  "devDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "node index.js ./**/*.sql"
+    }
+  }
+}
